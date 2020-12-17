@@ -4,7 +4,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <section class="login-page">
+      <div class="login-extras">
+        <h1>Welcome, Connoisseur!</h1>
+        <h2>Tell us who you are:</h2>
+        <input type="text" name="user-name" id="user-name-box" placeholder="Your Name Goes Here">
+        <button class="entry-button">I'm Ready. Take me to the food!</button>
+        <p class="name-error error hidden">Looks like you forgot your name. Let's try this again.</p>
+      </div>
+    </section>
+    <section class="recipe-page hidden">
+      <article class="heading">
+        <h1 class="title"></h1>
+        <button class="recipe-button" id="back-to-login">BACK TO LOGIN</button>
+        <button class="recipe-button">ADD A RECIPE</button>
+      </article>
+        <section class="box" id="entry-box">
+          <h1>What are you looking for?<span>*</span></h1>
+            <form>
+              <div>
+                <input type="radio" name="meal-choice" id="side-dish-select" value="side">
+                <label for="side-dish-select">Side Dish</label>
+              </div>
+              <div>
+                <input type="radio" name="meal-choice" id="main-dish-select">
+                <label for="main-dish-select">Main Dish</label>
+              </div>
+              <div>
+                <input type="radio" name="meal-choice" id="dessert-dish-select">
+                <label for="dessert-dish-select">Dessert</label>
+              </div>
+              <div>
+                <input type="radio" name="meal-choice" id="entire-dish-select">
+                <label for="entire-dish-select">Entire Meal</label>
+              </div>
+              <button id="lets-cook-button">Let's Cook!</button>
+              <p class="meal-error error hidden">Looks like you're missing a meal! What sounds good today?.</p>
+            </form>
+        </section>
+        <section class="box" id="results-box">
+          <img class="pot-picture" src="assets/cookpot.svg" alt="Cook Pot">
+          <h1 class="generated-recipe"></h1>
+          <br>
+          <button class="clear-button user-choice hidden">No thanks, let's try again.</button>
+          <button class="save hidden">Stash this so I can use it later!</button>
+        </section>
+        
+    </section>    
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
